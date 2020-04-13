@@ -40,7 +40,7 @@ client.on('message', async (message) => {
     }
 
     if (message.content.startsWith(prefix + "gay ")) {
-        message.channel.send("<@" + message.mentions.users.first().id + "> is " + Math.random(1,100) + "% gay.")
+        message.channel.send("<@" + message.mentions.users.first().id + "> is " + Math.floor(Math.random() * 99) + "% gay.")
     }
 
     if (message.content.startsWith("the earth is flat")) {
