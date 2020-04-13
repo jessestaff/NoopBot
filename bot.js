@@ -18,8 +18,14 @@ const rando_vids = [
     'vids/6.mp4',
     ]
 
-
+    function between(min, max) {  
+        return Math.floor(
+          Math.random() * (max - min + 1) + min
+        )
+      }
 //let the commands begin
+
+
 
 client.on('message', async (message) => {
     if (message.content.startsWith(prefix + "pog")) {
@@ -68,6 +74,22 @@ client.on('message', async (message) => {
         });
     }
 
+    
+
+
+    if(message.content.startsWith(prefix + "challenge ")) {
+        message.channel.send("<@" + message.author + "> has challenged <@" + message.mentions.users.first().id + ">!")
+        const challanged = message.mentions.users.first().id
+        const challanger = message.author
+        
+        if (between(1, 3) == 3) {
+            message.channel.send("<@" + message.mentions.users.first().id + "> has won the fight!")
+        } else {
+            message.channel.send("<@" +message.author + "> has won the fight!")
+        }
+        
+    }
+
     if (message.content.startsWith(prefix + "help")) {
         const Embedhelp = new Discord.MessageEmbed()
         .setColor('#3C9A0A')
@@ -80,6 +102,7 @@ client.on('message', async (message) => {
         .addField('!github', 'tests connection to github', true)
         .addField('!jessestaff', 'green gif', true)
         .addField('!random-vid', 'sends random video', true)
+        .addField('!challenge', 'challange someone to a duel!', true)
         .setThumbnail('https://i.imgur.com/QkdBT4w.png')
 
 
