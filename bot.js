@@ -67,6 +67,25 @@ client.on('message', async (message) => {
             ]
         });
     }
+
+    if (message.content.startsWith(prefix + "help")) {
+        const Embedhelp = new Discord.MessageEmbed()
+        .setColor('#3C9A0A')
+        .setTitle('Help Section')
+        .setDescription('just some of the commands for the bot')
+        .addField('!pog', 'poggers gif', true)
+        .addField('!ban', 'fake ban command for pranks', true)
+        .addField('!gay', 'sends percentage of how gay u are', true)
+        .addField('!pres', ':)', true)
+        .addField('!github', 'tests connection to github', true)
+        .addField('!jessestaff', 'green gif', true)
+        .addField('!random-vid', 'sends random video', true)
+        .setThumbnail('https://i.imgur.com/QkdBT4w.png')
+
+
+
+        message.channel.send(Embedhelp);
+    }
 })
 
 //login for token
