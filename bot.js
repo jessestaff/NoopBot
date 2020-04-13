@@ -2,6 +2,8 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const botconfig = require("./botconfig.json")
 
+var isReady = true;
+
 client.on('ready', () => {
     console.log(`Logged in!`);
   });
@@ -74,6 +76,19 @@ client.on('message', async (message) => {
             ]
         });
     }
+    
+//mp3 test command
+if (isReady && message.content.startsWith(prefix + "mp3-test")) {
+    isReady = false;
+    message.channel.send("testing")
+    var voiceChannel = message.member.voice.channel;
+    voiceChannel.join()
+
+    .then(connection => {
+        const dispatcher = connection.play("music.mp3");
+        dispatcher.on("end", end => {voiceChannel.leave();});
+      })
+}
 
     
 
