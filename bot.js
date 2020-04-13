@@ -30,6 +30,10 @@ client.on('message', async (message) => {
     if (message.content.startsWith(prefix + "pres")) {
         message.channel.send("that other bot FUCKING SUCKS DICK and noop is better")
     }
+
+    if (message.content.startsWith(prefix + "github")) {
+        message.channel.send("i am on the internet now B)")
+    }
 })
 
 
