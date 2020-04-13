@@ -34,6 +34,10 @@ client.on('message', async (message) => {
     if (message.content.startsWith(prefix + "github")) {
         message.channel.send("i am on the internet now B)")
     }
+
+    if (message.content.startsWith(prefix + "jessestaff")) {
+        message.channel.send("https://tenor.com/view/green-gif-5490562")
+    }
 })
 
 
