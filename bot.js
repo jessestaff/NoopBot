@@ -36,6 +36,10 @@ client.on('message', async (message) => {
         message.channel.send("<@" + message.mentions.users.first().id + "> has been banned.")
     }
 
+    if (message.content.startsWith(prefix + "gay ")) {
+        message.channel.send("<@" + message.mentions.users.first().id + "> is " + Math.random(1,100) + "% gay.")
+    }
+
     if (message.content.startsWith("the earth is flat")) {
         message.channel.send("the biggest dumbass in the server goes to <@" + message.author + ">")
         message.channel.send("good job")
