@@ -8,6 +8,16 @@ client.on('ready', () => {
 
 const prefix = "!";
 //L
+
+const rando_vids = [
+    'vids/1.mp4',
+    'vids/2.mp4',
+    'vids/3.mp4',
+    'vids/4.mp4',
+    'vids/5.mp4',
+    'vids/6.mp4',
+    ]
+
 client.on('message', async (message) => {
     if (message.content.startsWith(prefix + "pog")) {
         message.channel.send("POGGERS");
@@ -41,6 +51,14 @@ client.on('message', async (message) => {
 
     if (message.content.startsWith(prefix + "jessestaff")) {
         message.channel.send("https://tenor.com/view/green-gif-5490562")
+    }
+
+    if (message.content.startsWith(prefix + "random-vid")) {
+        message.channel.send(`here`, {
+            files: [
+                rando_vids[Math.floor(Math.random() * rando_vids.length)]
+            ]
+        });
     }
 })
 
