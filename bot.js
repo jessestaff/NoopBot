@@ -7,7 +7,7 @@ client.on('ready', () => {
   });
 
 const prefix = "!";
-
+//L
 client.on('message', async (message) => {
     if (message.content.startsWith(prefix + "pog")) {
         message.channel.send("POGGERS");
