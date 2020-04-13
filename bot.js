@@ -22,6 +22,10 @@ client.on('message', async (message) => {
         message.channel.send("shut the fuck up furry")
     }
 
+    if (message.content.startsWith(prefix + "ban <@429505158276317186>")) {
+        message.channel.send("Alt has been banned.")
+    }
+
     if (message.content.startsWith("the earth is flat")) {
         message.channel.send("the biggest dumbass in the server goes to <@" + message.author + ">")
         message.channel.send("good job")
