@@ -82,7 +82,7 @@ client.on('message', async (message) => {
         const challanged = message.mentions.users.first().id
         const challanger = message.author
         
-        if (between(1, 3) == 3) {
+        if (between(1, 3) == 2) {
             message.channel.send("<@" + message.mentions.users.first().id + "> has won the fight!")
         } else {
             message.channel.send("<@" +message.author + "> has won the fight!")
