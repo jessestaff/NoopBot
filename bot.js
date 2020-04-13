@@ -18,6 +18,9 @@ const rando_vids = [
     'vids/6.mp4',
     ]
 
+
+//let the commands begin
+
 client.on('message', async (message) => {
     if (message.content.startsWith(prefix + "pog")) {
         message.channel.send("POGGERS");
