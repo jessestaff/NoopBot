@@ -77,7 +77,7 @@ client.on('message', async (message) => {
         });
     }
     
-//mp3 test command
+//music make you lose control command
     if (isReady && message.content.startsWith(prefix + "music")) {
      isReady = false;
      message.channel.send("music make you lose control")
