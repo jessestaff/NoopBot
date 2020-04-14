@@ -3,9 +3,10 @@ noop is a bot for fun
 
 ## Installing
 
-Install node.js then instert the command 
+Install node.js then instert the commands
 ```bash
 npm install discord.js
+npm install @discordjs/opus
 ```
 
 ## Usage
