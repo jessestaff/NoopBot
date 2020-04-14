@@ -6,6 +6,8 @@ var isReady = true;
 
 client.on('ready', () => {
     console.log(`Logged in!`);
+    client.user.setActivity(`with ur mom`, { type: `PLAYING`})
+
   });
 
 const prefix = "!";
