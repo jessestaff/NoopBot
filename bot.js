@@ -88,6 +88,13 @@ client.on('message', async (message) => {
           const dispatcher = connection.play("music.mp3");
           dispatcher.setVolumeDecibels('10')
          })
+
+         function function2() {
+            message.member.voice.channel.leave();
+         }
+
+         setTimeout(function2, 7000);
+
     }
 
     if (message.content.startsWith(prefix + "stopvc")) {
