@@ -78,17 +78,21 @@ client.on('message', async (message) => {
     }
     
 //mp3 test command
-if (isReady && message.content.startsWith(prefix + "mp3-test")) {
-    isReady = false;
-    message.channel.send("testing")
-    var voiceChannel = message.member.voice.channel;
-    voiceChannel.join()
+    if (isReady && message.content.startsWith(prefix + "music")) {
+     isReady = false;
+     message.channel.send("music make you lose control")
+     var voiceChannel = message.member.voice.channel;
+     voiceChannel.join()
 
-    .then(connection => {
-        const dispatcher = connection.play("music.mp3");
-        dispatcher.on("end", end => {voiceChannel.leave();});
-      })
-}
+        .then(connection => {
+          const dispatcher = connection.play("music.mp3");
+          dispatcher.setVolumeDecibels('10')
+         })
+    }
+
+    if (message.content.startsWith(prefix + "stopvc")) {
+        message.member.voice.channel.leave();
+    }
 
     
 
