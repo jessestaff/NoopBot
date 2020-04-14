@@ -94,7 +94,7 @@ client.on('message', async (message) => {
          }
 
          setTimeout(function2, 7000);
-
+         isReady = true;
     }
 
     if (message.content.startsWith(prefix + "stopvc")) {
