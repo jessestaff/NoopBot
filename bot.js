@@ -118,6 +118,10 @@ client.on('message', async (message) => {
         }
         
     }
+
+    if(message.content.startsWith(prefix + "car")) {
+        message.channel.send("vroom vroom")
+    }
 //help command
     if (message.content.startsWith(prefix + "help")) {
         const Embedhelp = new Discord.MessageEmbed()
