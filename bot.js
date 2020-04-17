@@ -9,7 +9,7 @@ client.on('ready', () => {
     client.user.setActivity(`with ur mom`, { type: `PLAYING`})
 
   });
-
+//W
 const prefix = "!";
 //L
 
